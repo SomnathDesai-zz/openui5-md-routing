@@ -1,6 +1,6 @@
 ![OpenUI5 logo](http://openui5.org/images/OpenUI5_new_big_side.png)
 
-# openui5-sample-app
+# openui5-md-routing
 > [OpenUI5](https://github.com/SAP/openui5) sample app using the [UI5 Build and Development Tooling](https://github.com/SAP/ui5-tooling).
 
 ## Prerequisites
@@ -12,7 +12,7 @@
     ```sh
     git clone https://github.com/SomnathDesai/openui5-md-routing.git
     
-    cd openui5-sample-app
+    cd openui5-md-routing
     ```
 1. Install all dependencies
     ```sh
