@@ -1,4 +1,4 @@
-![OpenUI5 logo](http://openui5.org/images/OpenUI5_new_big_side.png)
+<!-- ![OpenUI5 logo](http://openui5.org/images/OpenUI5_new_big_side.png) -->
 
 # openui5-md-routing
 > [OpenUI5](https://github.com/SAP/openui5) sample app using the [UI5 Build and Development Tooling](https://github.com/SAP/ui5-tooling).
