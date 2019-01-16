@@ -1,0 +1,20 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.f"
+  displayBlock="true"
+>
+  <App>
+    <f:FlexibleColumnLayout id="fcl">
+      <f:beginColumnPages>
+        <!-- will be added by router -->
+      </f:beginColumnPages>
+      <f:midColumnPages>
+        <!-- will be added by router -->
+      </f:midColumnPages>
+      <f:endColumnPages>
+        <!-- will be added by router -->
+      </f:endColumnPages>
+    </f:FlexibleColumnLayout>
+  </App>
+</mvc:View>

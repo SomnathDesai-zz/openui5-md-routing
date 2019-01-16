@@ -1,0 +1,81 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AC')",
+          "uri": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AC')",
+          "type": "RMTSAMPLEFLIGHT.Carrier",
+          "content_type": "text/html",
+          "media_src": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AC')/$value",
+          "edit_media": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AC')/$value"
+        },
+        "carrid": "AC",
+        "CARRNAME": "Air Canada",
+        "CURRCODE": "CAD",
+        "URL": "http://www.AC.com",
+        "mimeType": "text/html",
+        "carrierFlights": {
+          "__deferred": {
+            "uri": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AC')/carrierFlights"
+          }
+        },
+        "carrierFlights_FW": {
+          "__deferred": {
+            "uri": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AC')/carrierFlights_FW"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "id": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AF')",
+          "uri": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AF')",
+          "type": "RMTSAMPLEFLIGHT.Carrier",
+          "content_type": "text/html",
+          "media_src": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AF')/$value",
+          "edit_media": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AF')/$value"
+        },
+        "carrid": "AF",
+        "CARRNAME": "Air France",
+        "CURRCODE": "EUR",
+        "URL": "http://www.AF.com",
+        "mimeType": "text/html",
+        "carrierFlights": {
+          "__deferred": {
+            "uri": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AF')/carrierFlights"
+          }
+        },
+        "carrierFlights_FW": {
+          "__deferred": {
+            "uri": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('AF')/carrierFlights_FW"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "id": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('LH')",
+          "uri": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('LH')",
+          "type": "RMTSAMPLEFLIGHT.Carrier",
+          "content_type": "text/html",
+          "media_src": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('LH')/$value",
+          "edit_media": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('LH')/$value"
+        },
+        "carrid": "LH",
+        "CARRNAME": "Lufthansa",
+        "CURRCODE": "EUR",
+        "URL": "http://www.LH.com",
+        "mimeType": "text/html",
+        "carrierFlights": {
+          "__deferred": {
+            "uri": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('LH')/carrierFlights"
+          }
+        },
+        "carrierFlights_FW": {
+          "__deferred": {
+            "uri": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/CarrierCollection('LH')/carrierFlights_FW"
+          }
+        }
+      }
+    ]
+  }
+}

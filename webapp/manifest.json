@@ -1,0 +1,129 @@
+{
+  "_version": "1.12.0",
+  "start_url": "index.html",
+  "sap.app": {
+    "id": "demo",
+    "type": "application",
+    "title": "Demo",
+    "description": "Sample Code",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "dataSources": {
+      "RMTSAMPLEFLIGHT": {
+        "uri": "/sampleService/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": [
+      "sap_belize_hcw",
+      "sap_belize_hcb",
+      "sap_belize",
+      "sap_belize_plus"
+    ]
+  },
+  "sap.ui5": {
+    "extends": {
+      "extensions": {
+        "sap.ui.controllerExtensions": {
+          "demo.controller.Master": {
+            "controllerName": "demo.controller.Base"
+          },
+          "demo.controller.Detail": {
+            "controllerName": "demo.controller.Base"
+          }
+        }
+      }
+    },
+    "handleValidation": true,
+    "dependencies": {
+      "minUI5Version": "1.56.6",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.f": {},
+        "sap.uxap": {},
+        "sap.ui.unified": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "resources": {
+      "js": [
+
+      ],
+      "css": [
+
+      ]
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "odata": {
+        "dataSource": "RMTSAMPLEFLIGHT",
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "preliminaryContext": true
+        },
+        "preload": true
+      },
+      "device": {
+        "type": "sap.ui.model.json.JSONModel"
+      }
+    },
+    "rootView": {
+      "viewName": "demo.view.App",
+      "id": "rootView",
+      "type": "XML",
+      "async": true,
+      "height": "100%"
+    },
+    "routing": {
+      "routes": [{
+        "name": "master",
+        "pattern": "",
+        "target": "master",
+        "layout": "OneColumn"
+      }, {
+        "name": "masterDetail",
+        "pattern": "items/{itemId}",
+        "target": [
+          "master",
+          "detail"
+        ],
+        "layout": "TwoColumnsMidExpanded"
+      }],
+      "targets": {
+        "master": {
+          "viewId": "masterView",
+          "viewName": "Master",
+          "controlAggregation": "beginColumnPages"
+        },
+        "detail": {
+          "viewId": "detailView",
+          "viewName": "Detail",
+          "controlAggregation": "midColumnPages"
+        }
+      },
+      "config": {
+        "routerClass": "sap.f.routing.Router",
+        "async": true,
+        "viewType": "XML",
+        "viewPath": "demo.view",
+        "controlId": "fcl"
+      }
+    }
+  }
+}

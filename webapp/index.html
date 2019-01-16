@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <script id="sap-ui-bootstrap"
+    src="https://openui5nightly.hana.ondemand.com/resources/sap-ui-core.js"
+    data-sap-ui-libs="sap.m, sap.f, sap.uxap, sap.ui.layout, sap.ui.unified"
+    data-sap-ui-theme="sap_belize"
+    data-sap-ui-compatversion="edge"
+    data-sap-ui-async="true"
+    data-sap-ui-resourceroots='{"demo": "./"}'
+    data-sap-ui-xx-componentpreload="off"
+    data-sap-ui-xx-waitfortheme="true"
+    data-sap-ui-modules="demo/localService/mockserver,demo/localService/simulatePreloaded,demo/Component,sap/ui/thirdparty/datajs,sap/ui/thirdparty/sinon"
+  ></script>
+  <script>
+    sap.ui.getCore().attachInit(() => sap.ui.require([
+      "sap/ui/core/ComponentContainer",
+      "demo/localService/mockserver",
+    ], (Container, mockserver) => mockserver.init().then(() => new Container({
+      manifest: true,
+      name: "demo",
+      height: "100%",
+    }).placeAt("content"))));
+  </script>
+</head>
+<body id="content" class="sapUiBody">
+</body>
+</html>

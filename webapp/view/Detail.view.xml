@@ -1,0 +1,125 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:uxap="sap.uxap"
+  xmlns:form="sap.ui.layout.form"
+  xmlns:core="sap.ui.core"
+  controllerName="demo.controller.Detail"
+>
+  <uxap:ObjectPageLayout id="objectPageLayout"
+    showAnchorBar="false"
+    useIconTabBar="true"
+  >
+    <uxap:headerTitle>
+      <uxap:ObjectPageHeader id="objectPageHeader"
+        objectImageURI="sap-icon://product"
+        objectImageAlt="Product"
+        objectTitle="Carrier {odata>CARRNAME}"
+      />
+    </uxap:headerTitle>
+    <uxap:ObjectPageSection>
+      <uxap:ObjectPageSubSection>
+        <Table id="table"
+          class="sapUxAPObjectPageSubSectionAlignContent"
+          width="auto"
+          contextualWidth="Auto"
+          popinLayout="GridSmall"
+          sticky="ColumnHeaders"
+          items="{odata>carrierFlights}"
+        >
+          <headerToolbar>
+            <OverflowToolbar id="toolbar"
+              design="Transparent"
+            >
+              <Title id="title" text="Flights"/>
+              <ToolbarSpacer/>
+              <OverflowToolbarButton id="toolbarBtn"
+                icon="sap-icon://add"
+                press=".onAddBtnPress"
+              />
+            </OverflowToolbar>
+          </headerToolbar>
+          <columns>
+            <Column id="flightNumberColumn">
+              <Label id="flightNumberLabel"
+                text="Flight Number"
+                labelFor="flightNumberColumn"
+                wrapping="true"
+              />
+            </Column>
+            <Column id="flightDateColumn"
+              demandPopin="true"
+              minScreenWidth="Tablet"
+              popinDisplay="Inline"
+              hAlign="Right"
+            >
+              <Label id="flightDateLabel"
+                text="Flight Date"
+                labelFor="flightDateColumn"
+                wrapping="true"
+              />
+            </Column>
+            <Column id="departureTimeColumn"
+              demandPopin="true"
+              minScreenWidth="Tablet"
+              popinDisplay="Inline"
+              hAlign="Right"
+            >
+              <Label id="departureTimeLabel"
+                text="Departure Time"
+                labelFor="departureTimeColumn"
+                wrapping="true"
+              />
+            </Column>
+            <Column id="ticketPriceColumn"
+              demandPopin="true"
+              minScreenWidth="300px"
+              popinDisplay="Inline"
+              hAlign="Right"
+            >
+              <Label id="ticketPriceLabel"
+                text="Ticket Price"
+                labelFor="ticketPriceColumn"
+                wrapping="true"
+              />
+            </Column>
+          </columns>
+          <ColumnListItem>
+            <Text text="{
+              path: 'odata>connid',
+              type: 'sap.ui.model.odata.type.String'
+            }" />
+            <Text text="{
+              path: 'odata>fldate',
+              type: 'sap.ui.model.odata.type.DateTime',
+              constraints: {
+                isDateOnly: true,
+                displayFormat: 'Date'
+              }
+            }"/>
+            <Text text="{
+              path: 'odata>flightDetails/departureTime',
+              type: 'sap.ui.model.odata.type.Time',
+              formatOptions: {
+                style: 'medium'
+              }
+            }"/>
+            <Text text="{
+              parts: [
+                'odata>PRICE',
+                'odata>CURRENCY'
+              ],
+              type: 'sap.ui.model.type.Currency',
+              formatOptions: {
+                showMeasure: true
+              }
+            }"/>
+          </ColumnListItem>
+        </Table>
+      </uxap:ObjectPageSubSection>
+    </uxap:ObjectPageSection>
+    <uxap:dependents>
+      <core:Fragment fragmentName="demo.view.fragment.AddFlight" type="XML"/>
+    </uxap:dependents>
+  </uxap:ObjectPageLayout>
+</mvc:View>
